@@ -13,10 +13,10 @@ namespace TaschenrechnerGit
             Console.WriteLine("Taschenrechner");
 
             Console.Write("Bitte geben sie eine Zahl ein: ");
-            int zahl1 = Convert.ToInt32(Console.ReadLine());
+            double zahl1 = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Bitte geben sie eine zweite Zahl ein: ");
-            int zahl2 = Convert.ToInt32(Console.ReadLine());
+            double zahl2 = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Geben sie ein Rechenoperator an: ");
             char rechenoperator = Convert.ToChar(Console.ReadLine());
@@ -44,30 +44,30 @@ namespace TaschenrechnerGit
             Console.ReadLine();
         }
 
-        private static void Division(int zahl1, int zahl2)
+        private static void Division(double zahl1, double zahl2)
         {
-            int ergebnis = zahl1 / zahl2;
+            double ergebnis = zahl1 / zahl2;
 
             Console.Write("Ergebnis: " + ergebnis);
         }
 
-        private static void Multiplikation(int zahl1, int zahl2)
+        private static void Multiplikation(double zahl1, double zahl2)
         {
-            int ergebnis = zahl1 * zahl2;
+            double ergebnis = zahl1 * zahl2;
 
             Console.Write("Ergebnis: " + ergebnis);
         }
 
-        private static void Subtraktion(int zahl1, int zahl2)
+        private static void Subtraktion(double zahl1, double zahl2)
         {
-            int ergebnis = zahl1 - zahl2;
+            double ergebnis = zahl1 - zahl2;
 
             Console.Write("Ergebnis: " + ergebnis);
         }
 
-        private static void Addition(int zahl1, int zahl2)
+        private static void Addition(double zahl1, double zahl2)
         {
-            int ergebnis = zahl1 + zahl2;
+            double ergebnis = zahl1 + zahl2;
 
             Console.Write("Ergebnis: " + ergebnis);
         }
