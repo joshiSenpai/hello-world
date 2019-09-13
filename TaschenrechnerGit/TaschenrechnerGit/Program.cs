@@ -26,6 +26,7 @@ namespace TaschenrechnerGit
                     if (rechenoperator != '+' && rechenoperator != '-' && rechenoperator != '*' && rechenoperator != '/')
                     {
                         throw new Exception("RECHENOPERATOR (+|-|*|/), drück ENTER erst");
+
                     }
 
                     Console.Write("Bitte geben sie eine Zahl ein: ");
@@ -33,10 +34,14 @@ namespace TaschenrechnerGit
 
                     Console.Write("Bitte geben sie eine zweite Zahl ein: ");
                     zahl2 = Convert.ToDouble(Console.ReadLine());
+
+                    exception = false;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     exception = true;
+                    Console.WriteLine(ex.Message);
+                    Console.ReadLine();
                     Console.Clear();
                 }
               
