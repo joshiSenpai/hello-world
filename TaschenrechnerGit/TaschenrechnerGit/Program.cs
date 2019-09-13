@@ -13,9 +13,9 @@ namespace TaschenrechnerGit
             Console.WriteLine("Taschenrechner");
 
             Console.Write("Bitte geben sie eine Zahl ein: ");
-            Console.Write("Bitte geben sie eine zweite Zahl ein: ");
-
             int zahl1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Bitte geben sie eine zweite Zahl ein: ");
             int zahl2 = Convert.ToInt32(Console.ReadLine());
 
             Console.Write("Geben sie ein Rechenoperator an: ");
@@ -36,35 +36,43 @@ namespace TaschenrechnerGit
                 case '/':
                     Division(zahl1, zahl2);
                     break;
+                default:
+                    Console.WriteLine("Error");
+                    break;
             }
+
+            Console.ReadLine();
         }
 
         private static void Division(int zahl1, int zahl2)
         {
             int ergebnis = zahl1 / zahl2;
 
-            Console.Write(ergebnis);
+            Console.Write("Ergebnis: " + ergebnis);
         }
 
         private static void Multiplikation(int zahl1, int zahl2)
         {
             int ergebnis = zahl1 * zahl2;
 
-            Console.Write(ergebnis);
+            Console.Write("Ergebnis: " + ergebnis);
         }
 
         private static void Subtraktion(int zahl1, int zahl2)
         {
             int ergebnis = zahl1 - zahl2;
 
-            Console.Write(ergebnis);
+            Console.Write("Ergebnis: " + ergebnis);
         }
 
         private static void Addition(int zahl1, int zahl2)
         {
-            double ergebnis = zahl1 + zahl2;
+            int ergebnis = zahl1 + zahl2;
 
-            Console.Write(ergebnis);
+            Console.Write("Ergebnis: " + ergebnis);
         }
+
+
+
     }
 }
