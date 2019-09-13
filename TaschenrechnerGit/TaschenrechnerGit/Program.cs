@@ -31,12 +31,19 @@ namespace TaschenrechnerGit
                     Subtraktion(zahl1, zahl2);
                     break;
                 case '*':
-                    
+                    Multiplikation(zahl1, zahl2);
                     break;
                 case '/':
                     
                     break;
             }
+        }
+
+        private static void Multiplikation(int zahl1, int zahl2)
+        {
+            int ergebnis = zahl1 * zahl2;
+
+            Console.Write(ergebnis);
         }
 
         private static void Subtraktion(int zahl1, int zahl2)
