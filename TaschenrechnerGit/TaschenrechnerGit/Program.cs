@@ -34,9 +34,16 @@ namespace TaschenrechnerGit
                     Multiplikation(zahl1, zahl2);
                     break;
                 case '/':
-                    
+                    Division(zahl1, zahl2);
                     break;
             }
+        }
+
+        private static void Division(int zahl1, int zahl2)
+        {
+            int ergebnis = zahl1 / zahl2;
+
+            Console.Write(ergebnis);
         }
 
         private static void Multiplikation(int zahl1, int zahl2)
