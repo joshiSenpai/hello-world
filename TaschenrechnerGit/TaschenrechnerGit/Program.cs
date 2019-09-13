@@ -12,14 +12,42 @@ namespace TaschenrechnerGit
         {
             Console.WriteLine("Taschenrechner");
 
-            Console.Write("Bitte geben sie eine Zahl ein: ");
-            double zahl1 = Convert.ToInt32(Console.ReadLine());
+            double zahl1 = 0;
+            double zahl2 = 0;
+            bool exception = false;
+            char rechenoperator = '#';
+            do
+            {
+                try
+                {
+                    Console.Write("Geben sie ein Rechenoperator an: ");
+                    rechenoperator = Convert.ToChar(Console.ReadLine());
 
-            Console.Write("Bitte geben sie eine zweite Zahl ein: ");
-            double zahl2 = Convert.ToInt32(Console.ReadLine());
+                    if (rechenoperator != '+' && rechenoperator != '-' && rechenoperator != '*' && rechenoperator != '/')
+                    {
+                        throw new Exception("RECHENOPERATOR (+|-|*|/), drück ENTER erst");
+                    }
 
-            Console.Write("Geben sie ein Rechenoperator an: ");
-            char rechenoperator = Convert.ToChar(Console.ReadLine());
+                    Console.Write("Bitte geben sie eine Zahl ein: ");
+                    zahl1 = Convert.ToDouble(Console.ReadLine());
+
+                    Console.Write("Bitte geben sie eine zweite Zahl ein: ");
+                    zahl2 = Convert.ToDouble(Console.ReadLine());
+                }
+                catch (Exception)
+                {
+                    exception = true;
+                    Console.Clear();
+                }
+              
+            } while (exception == true);
+
+
+
+
+
+           
+            
 
 
             switch (rechenoperator)
