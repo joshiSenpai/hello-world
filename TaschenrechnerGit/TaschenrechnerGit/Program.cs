@@ -28,7 +28,7 @@ namespace TaschenrechnerGit
                     Addition (zahl1, zahl2);
                     break;
                 case '-':
-                    
+                    Subtraktion(zahl1, zahl2);
                     break;
                 case '*':
                     
@@ -39,7 +39,12 @@ namespace TaschenrechnerGit
             }
         }
 
-       
+        private static void Subtraktion(int zahl1, int zahl2)
+        {
+            int ergebnis = zahl1 - zahl2;
+
+            Console.Write(ergebnis);
+        }
 
         private static void Addition(int zahl1, int zahl2)
         {
